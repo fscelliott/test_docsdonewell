@@ -1,0 +1,30 @@
+https://learngitbranching.js.org/
+    - interactive with visualizations
+    
+    https://docs.python-guide.org/dev/virtualenvs/
+    ??
+
+https://reactjs.org/tutorial/tutorial.html 
+     -like how they highlight in yellow things that might not make sense
+     - like how they give you starter code and recommend NOT copy/pasting
+     -give you multiple codepens at different stges of completion ("View the full code at this point")
+     -like how they give you a 'learn by doing' AND a conceptual reference up front:
+     
+     "Tip
+
+This tutorial is designed for people who prefer to learn by doing. If you prefer learning concepts from the ground up, check out our step-by-step guide. You might find this tutorial and the guide complementary to each other."
+
+    -like how they reassure you that the exercise is relevant: "We will build a small game during this tutorial. You might be tempted to skip it because you’re not building games — but give it a chance. The techniques you’ll learn in the tutorial are fundamental to building any React app, and mastering it will give you a deep understanding of React."
+
+https://docs.docker.com/get-started/
+
+
+https://blog.risingstack.com/learn-javascript-for-free/
+     - nice 'alternative to paying for a bootcamp' article, especially project ideas
+     
+https://docs.mapbox.com/mapbox-gl-js/api/
+      - I like how you can use a toggle control to conditionally display whole paragraphs/page sections depending on your language/implementation. It's a step up from multi-language code sample boxes.
+
+
+https://mailchimp.com/developer/guides/run-async-requests-with-the-batch-endpoint/#make-a-batch-operations-request
+       - huh this seems to COMBINE an API reference with guides, examples. how did they do it??? 

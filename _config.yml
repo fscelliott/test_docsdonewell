@@ -1,0 +1,167 @@
+#TODO: Replace <site root>/index.md with a modified Minimal Mistakes index.html. Be sure to enable pagination if using the home layout by adding the necessary lines to _config.yml. https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+#TODO: when it comes time to go to github compare this: https://mmistakes.github.io/minimal-mistakes/docs/installation/
+#If you plan to host with GitHub Pages be sure to properly setup jekyll-remote-theme as it is required for the theme to work properly.
+#to this: https://programminghistorian.org/en/lessons/building-static-sites-with-jekyll-github-pages
+
+#TODO: consider categories I'd like; look at idratherbewriting
+
+#LEFT OFF IN https://mmistakes.github.io/minimal-mistakes/docs/configuration/: "default key"
+
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Developer experience consultant and technical writer
+#title: docs done well
+email: fsc.elliott@gmail.com
+description: Developer experience and docs
+#>- # this means to ignore newlines until next key
+ 
+#Reflections on software development practices
+#dev-oriented documentation, like API programming guides.
+  
+#FUTURE TROUBLESHOOTING? no need to specify baseurl/url if publishing to https://fscelliott.github.io/docsdonewell/
+
+
+url: "https://www.franceselliott.com"  #production env
+
+#url: "localhost:4000"  #for local test. 
+
+#old URL: #url: "https://www.docsdonewell.com" 
+ 
+# the base hostname & protocol for your site, e.g. http://example.com #TODO: change https://docsdonewell.com <--make sure no conflict http/https; GH forces https
+twitter_username: fscelliott
+github_username:  fscelliott
+repository: "fscelliott/docsdonewell" 
+
+
+# Build settings
+markdown: kramdown
+
+#Theme settings 
+#theme for githubpages hosting
+remote_theme: "mmistakes/minimal-mistakes"
+
+#theme for local /self hosting
+#theme: minimal-mistakes-jekyll
+#minimal_mistakes_skin: "default"
+
+#Site settings
+site.locale: "en-US"
+#search: can set custom search options  https://mmistakes.github.io/minimal-mistakes/docs/configuration/ 
+search: true
+
+#Outputting: enables default home page to contain most recent posts
+#todo: paginate: 5 ...ugh it's a little complicated
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/ 
+#/blog/page:num
+
+
+#make sure Jekyll sees _pages; not sure if really necessary (future troubleshooting)
+include: ["_pages"]
+
+#site organization
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+
+
+
+social:
+  type: Person
+  name: Frances Elliott
+  links:
+    - "https://twitter.com/frances69890423"
+    - "https://www.linkedin.com/in/frances-elliott-5904b814/"
+
+#site author
+author:
+  name: "Frances Elliott"
+  avatar: "/assets/images/bio-photo.jpg" 
+  bio: "Developer experience consultant, particularly specialized in API onboarding, and technical writer. Former software dev project management. I use this space to reflect personally on my work challenges and accomplishments."
+  linkedin: "frances-elliott"
+  github: "fscelliott"
+  
+  #email: TODO?
+  #more social media links: TODO?
+    
+#google analytics
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "UA-170522599-1"
+    anonymize_ip: false # default
+
+
+#todo: other search engines, not just verify with google search console 
+google_site_verification: "pDiqOafXX3L9e0bxsZmjLjIVTBBGbZ1dJj6oTOpXJJc" 
+
+
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate 
+  - jekyll-include-cache
+  
+ #defaults for front matter
+#todo: read_time https://mmistakes.github.io/minimal-mistakes/docs/configuration/
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      #read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
+
+
+#comments
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "docsdonewell" 
+    #as per https://docsdonewell.disqus.com/admin/settings/general/ 
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
