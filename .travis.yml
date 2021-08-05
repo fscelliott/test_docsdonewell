@@ -6,6 +6,8 @@ before_install: gem update bundler
 
 install:
   - bundle install
+  - bundle update
+
 
 script:
   #- "./script/build-travis.sh"
