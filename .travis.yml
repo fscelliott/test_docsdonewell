@@ -12,7 +12,7 @@ script:
   - bundle exec jekyll build
 branches:
   only:
-  - master
+  - main
 
 #sudo: false
 #test commit
