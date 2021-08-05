@@ -6,13 +6,12 @@ before_install: gem update bundler
 
 install:
   - bundle install
-  - bundle update
-  - bundle update github-pages
+
 
 
 script:
-  #- "./script/build-travis.sh"
-  - bundle exec jekyll build
+  - "./script/build-travis.sh"
+
 branches:
   only:
   - main
