@@ -10,7 +10,10 @@ install:
 
 
 script:
-  - "./scripts/build-travis.sh"
+  - bundle update
+  - bundle update github-pages
+  - bundle exec jekyll build
+  #- "./scripts/build-travis.sh"
 
 branches:
   only:
