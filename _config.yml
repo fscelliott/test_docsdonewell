@@ -50,7 +50,7 @@ repository: "fscelliott/docsdonewell"
 markdown: kramdown
 
 #Theme settings 
-#theme for githubpages hosting
+#theme for githubpages hosting; this is remote hosting NOT gem-based
 remote_theme: "mmistakes/minimal-mistakes"
 
 #theme for local /self hosting
