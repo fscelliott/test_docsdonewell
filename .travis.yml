@@ -10,7 +10,7 @@ install:
 
 
 script:
-  - "./script/build-travis.sh"
+  - "./scripts/build-travis.sh"
 
 branches:
   only:
